@@ -1,0 +1,115 @@
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.cert-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: border-color .2s;
+}
+
+.cert-card:hover {
+  border-color: var(--lime);
+}
+
+.cert-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(184,255,0,.1);
+  border: 1px solid rgba(184,255,0,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.cert-name {
+  font-family: var(--mono);
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--muted);
+  margin-top: .25rem;
+}
+
+/* Education */
+.edu-section {
+  margin-top: 1rem;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.edu-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--lime), transparent);
+}
+
+.edu-year {
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--lime);
+  margin-bottom: .5rem;
+  letter-spacing: .1em;
+}
+
+.edu-degree {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .35rem;
+  line-height: 1.4;
+}
+
+.edu-school {
+  font-size: .9rem;
+  color: var(--muted);
+  margin-bottom: .9rem;
+}
+
+.edu-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.edu-course {
+  font-family: var(--mono);
+  font-size: .68rem;
+  padding: .2rem .5rem;
+  border: 1px solid var(--border);
+  color: var(--dim);
+}
+
+@media (max-width: 768px) {
+  .edu-grid { grid-template-columns: 1fr; }
+}
